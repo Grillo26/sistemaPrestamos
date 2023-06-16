@@ -268,12 +268,13 @@
     <div class="col-12 pb-2">
         <small>Los montos siguientes son el total del día actual</small>
     </div>
+    <!--##################CAJA ULTIMA LIQUIDADA############################-->
     <div class="col-md-4 col-sm-6">
-        <a href="{{url('client/create')}}">
+        <a href="#">
             <div class="widget stats-widget widget-resume">
                 <div class="widget-body clearfix h-100 bg-white">
                     <div class="pull-left">
-                        <h3 class="widget-title text-dark">DISPONIBLE (CAJA)</h3>
+                        <h3 class="widget-title text-dark">Total en Caja</h3>
                         <h3 class="widget-title text-dark">
                             <b>{{$base_agent - $total_bill}}</b>
                             @if($total_summary>0)
@@ -286,16 +287,40 @@
                     </div>
                     <span class="pull-right big-icon text-danger watermark"><i class="fa fa-arrow-down"></i></span>
                 </div>
+                <!--Caja ultima liquidada-->
+                <div class="widget-body clearfix h-100 bg-white">
+                    <h3 class="pull-left text-dark widget-title pr-3 pt-1">Caja Última Liquidada</h3>
+                    <div class="pull-rigth">
+                        <input disabled type="text" name="name" value="{{($base_agent - $total_bill) + $total_summary}}">
+                    </div>              
+                </div>
+                <!--Estimado a Cobrar-->
+                <div class="widget-body clearfix h-100 bg-white">
+                    <h3 class="pull-left text-dark widget-title pr-3 pt-1">Estimado a cobrar</h3>
+                    <div class="pull-rigth">
+                        <input disabled type="text" name="name" value="{{($base_agent - $total_bill) + $total_summary}}">
+                    </div>              
+                </div>
+                <!--Total cobrado liquidado-->
+                <div class="widget-body clearfix h-100 bg-white">
+                    <h3 class="pull-left text-dark widget-title pr-3 pt-1">Total Cobrado</h3>
+                    <div class="pull-rigth">
+                        <input disabled type="text" name="name" value="{{($base_agent - $total_bill) + $total_summary}}">
+                    </div>              
+                </div>
+
             </div><!-- .widget -->
         </a>
-
     </div>
+    
+
+    <!--###################TOTAL COBRADO DIA############################-->
     <div class="col-md-4 col-sm-6">
         <a href="{{url('transaction')}}">
             <div class="widget stats-widget widget-resume">
                 <div class="widget-body h-100 clearfix bg-white">
                     <div class="pull-left">
-                        <h3 class="widget-title text-dark">RECAUDADO</h3>
+                        <h3 class="widget-title text-dark">TOTAL COBRADO DIA</h3>
                         <h3 class="widget-title text-dark"><b>{{$total_summary}}</b></h3>
                     </div>
                     <span class="pull-right big-icon text-success watermark"><i class="fa fa-arrow-up"></i></span>
@@ -304,6 +329,22 @@
         </a>
 
     </div>
+    <!--###################TOTAL VENTAS############################-->
+    <div class="col-md-4 col-sm-6">
+        <a href="{{url('transaction')}}">
+            <div class="widget stats-widget widget-resume">
+                <div class="widget-body h-100 clearfix bg-white">
+                    <div class="pull-left">
+                        <h3 class="widget-title text-dark">TOTAL VENTAS</h3>
+                        <h3 class="widget-title text-dark"><b>{{$total_summary}}</b></h3>
+                    </div>
+                    <span class="pull-right big-icon text-success watermark"><i class="fa fa-arrow-up"></i></span>
+                </div>
+            </div><!-- .widget -->
+        </a>
+
+    </div>
+    <!--#################################################-->
     <div class="col-md-4 col-sm-6">
         <a href="{{url('bill')}}">
             <div class="widget stats-widget widget-resume">
@@ -318,6 +359,7 @@
         </a>
 
     </div>
+    <!--#####################################################-->
     <div class="clearfix"></div>
     <div class="row m-0 d-block col-12 pb-4">
         <hr>
