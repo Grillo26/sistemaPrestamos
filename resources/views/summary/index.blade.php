@@ -48,6 +48,55 @@
                     </div>
 
                 </div>
+                <!---->
+                <style>
+                    @media (max-width: 576px) {
+                    .custom-checkbox .form-check-input[type="checkbox"] {
+                        transform: scale(2);
+                    }
+                    }
+                </style>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="widget p-lg">
+                            <h4 class="m-b-lg">Historial</h4>
+                            <div class="container">
+                                <div class="row">
+                                <div class="col-6 col-md-3">
+                                    <div class="custom-checkbox">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="custom-checkbox">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="custom-checkbox">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="custom-checkbox">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                    </div>
+                                </div>
+                                <!-- Repite las columnas para las demás celdas de la rejilla -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---->
                 <div class="row">
                     <div class="col-md-12">
                         <div class="widget p-lg">
