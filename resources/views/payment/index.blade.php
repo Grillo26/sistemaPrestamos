@@ -40,6 +40,7 @@
                         <div class="form-group">
                             <label for="done_payment">Cuotas pagadas:</label>
                             <input type="text" readonly class="form-control" id="done_payment">
+                            
                         </div>
                         <div class="form-group">
                             <label for="amount">Valor de abono:</label>
@@ -101,6 +102,9 @@
                                             <a href="{{url('payment')}}/{{$client->credit_id}}?rev=true" class="btn btn-success btn-xs"><i class="fa fa-money"></i> Pagar</a>
                                             <a href="{{url('summary')}}?id_credit={{$client->credit_id}}" class="btn btn-info btn-xs"><i class="fa fa-history"></i> Ver</a>
                                         </td>
+
+
+                                        
                                     </tr>
                                     @endif
 

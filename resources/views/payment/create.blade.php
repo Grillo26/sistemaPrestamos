@@ -2,6 +2,17 @@
 
 @section('content')
     <!-- APP MAIN ==========-->
+    <style>
+    .custom-checkbox .form-check-input[type="checkbox"] {
+      width: 50px;
+      height: 30px;
+      border: 50px solid #88c64b;
+      border-radius: 25px;
+      padding:20px;
+    }
+    .custom-checkbox .form-check-label {
+    }
+    </style>
     <main id="app-main" class="app-main">
         <div class="wrap">
             <section class="app-content">
@@ -51,8 +62,27 @@
                                     <div class="form-group">
                                         <button type="submit" {{($credit_data['rest']<1) ? 'disabled': ''}} class="btn btn-success btn-block btn-md">Guardar pago</button>
                                     </div>
-                                </form>
 
+
+                                    <div class="container">
+                                        <div class="row checkbox-grid">
+                                            <div class="col-3 col-sm-3 col-md-2">
+                                                <div class="custom-checkbox">
+                                                    <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label class="form-check-label">w</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                    
+                                            
+                                        </div>
+                                        
+                                            <!-- Repite las columnas para las demás casillas de verificación -->
+                                    </div>
+
+                                </form>
+                               
                             </div><!-- .widget-body -->
                         </div><!-- .widget -->
                     </div><!-- END column -->
