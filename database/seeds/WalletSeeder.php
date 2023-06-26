@@ -18,7 +18,7 @@ class WalletSeeder extends Seeder
             [
                 'name' => 'Caja principal',
                 'country' => 1,
-                'address' => 'Madrid'
+                'address' => 'Bolivia'
             ]
         );
 

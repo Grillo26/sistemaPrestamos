@@ -20,7 +20,7 @@ class AgentHasSeeder extends Seeder
                 'id_user_agent' => '3',
                 'id_supervisor' => '2',
                 'id_wallet' => '1',
-                'base' => '100000'
+                'base' => '0'
             ]
         );
 

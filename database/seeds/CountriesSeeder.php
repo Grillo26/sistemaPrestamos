@@ -17,13 +17,7 @@ class CountriesSeeder extends Seeder
         $this->faker = $faker = Faker\Factory::create();
         $tests = array(
             [
-                'name' => $this->faker->country
-            ],
-            [
-                'name' => $this->faker->country
-            ],
-            [
-                'name' => $this->faker->country
+                'name' => 'Bolivia'
             ]
         );
 

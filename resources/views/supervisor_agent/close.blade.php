@@ -30,7 +30,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="base_amount">Ventas:</label>
-                                        <input type="text" name="today" value="{{$today_sell}}" readonly class="form-control" id="base_amount" required>
+                                        <input type="text" name="today" value="{{$today_sell}}" readonly class="form-control" id="base_amount" required> 
                                     </div>
                                     <div class="form-group">
                                         <label for="base_amount">Gastos:</label>

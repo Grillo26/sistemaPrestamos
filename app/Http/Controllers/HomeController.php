@@ -68,6 +68,9 @@ class HomeController extends Controller
         $sql[] = ['bills.created_at', '>=', Carbon::now()->startOfDay()];
         $sql[] = ['bills.created_at', '<=', Carbon::now()->endOfDay()];
 
+        $today_sell = db_credit::whereDate('created_at','=',Carbon::now()->toDateString())
+                ->where('id_agent', '=', Auth::id())
+                ->sum('amount_neto');
 
         $bill = db_bills::where($sql)
             ->join('wallet', 'bills.id_wallet', '=', 'wallet.id')
@@ -78,7 +81,8 @@ class HomeController extends Controller
             'base_agent' => $base,
             'total_bill' => $bill->sum('amount'),
             'total_summary' => $total_summary,
-            'close_day' => $close_day
+            'close_day' => $close_day,
+            'today_sell'=> $today_sell
         ];
 
         return view('home',$data);
