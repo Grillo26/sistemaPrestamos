@@ -62,25 +62,7 @@
                                     <div class="form-group">
                                         <button type="submit" {{($credit_data['rest']<1) ? 'disabled': ''}} class="btn btn-success btn-block btn-md">Guardar pago</button>
                                     </div>
-
-
-                                    <div class="container">
-                                        <div class="row checkbox-grid">
-                                            <div class="col-3 col-sm-3 col-md-2">
-                                                <div class="custom-checkbox">
-                                                    <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox">
-                                                    <label class="form-check-label">w</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                                    
-                                            
-                                        </div>
-                                        
-                                            <!-- Repite las columnas para las demás casillas de verificación -->
-                                    </div>
-
+                                    
                                 </form>
                                
                             </div><!-- .widget-body -->

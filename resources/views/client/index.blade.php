@@ -10,7 +10,7 @@
                         <div class="widget p-lg">
                             <h4 class="m-b-lg">Detalles Clientes y Ventas</h4>
                             <table class="table client-table">
-                                <thead class="visible-lg">
+                                <thead >
                                 <tr>
                                     <th>Nombre</th>
                                     <th>Apellidos</th>
@@ -24,8 +24,9 @@
                                     <th>Accion</th>
                                 </tr>
                                 </thead>
-                                <tbody>
+                                
                                 @foreach($clients as $client)
+                                <tbody>
                                     <tr>
                                         <td><span class="value">{{$client->name}}</span></td>
                                         <td><span class="value">{{$client->last_name}}</span></td>
@@ -44,8 +45,8 @@
 
                                         </td>
                                         <td>
-                                            <a href="{{url('client/create')}}?id={{$client->id}}" class="btn btn-success btn-xs">Venta</a>
-                                            <a href="{{url('client')}}/{{$client->id}}" class="btn btn-info btn-xs">Datos</a>
+                                            <a href="{{url('client/create')}}?id={{$client->id}}" class="btn btn-success btn-xs">Añadir Prestamo</a>
+                                            <a href="{{url('client')}}/{{$client->id}}" class="btn btn-info btn-xs"> Ver Datos</a>
                                             @if(isset($client->lat) && isset($client->lng))
                                                 <a href="http://www.google.com/maps/place/{{$client->lat}},{{$client->lng}}" target="_blank" class="btn btn-info btn-xs">Ver Mapa</a>
                                             @endif

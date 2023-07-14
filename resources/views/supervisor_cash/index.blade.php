@@ -11,12 +11,14 @@
                         <div class="widget p-lg">
                             <h4 class="m-b-lg">Cartera</h4>
                             <table class="table supervisor-cash-table">
-                                <tbody>
+                                <thead>
                                 <tr class="visible-lg">
                                     <th>Cartera</th>
                                     <th>Detalle</th>
                                     <th>Valor inicial</th>
                                 </tr>
+                                </thead>
+                                <tbody>
                                 @foreach($clients as $client)
                                     <tr>
                                         <td>{{$client->name}}</td>

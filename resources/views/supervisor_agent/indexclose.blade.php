@@ -8,9 +8,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="widget p-lg">
-                            <h4 class="m-b-lg">Agentes</h4>
+                            <h4 class="m-b-lg">Cierre de Caja</h4>
                             <table class="table supervisor-close-table">
-                                <tbody>
+                                <thead>
                                 <tr class="visible-lg">
                                     <th>Nombre</th>
                                     <th>Cartera</th>
@@ -18,6 +18,8 @@
                                     <th>Ciudad</th>
                                     <th>Accion</th>
                                 </tr>
+                                </thead>
+                                <tbody>
                                 @foreach($clients as $client)
                                     @if($client->show)
                                         <tr>

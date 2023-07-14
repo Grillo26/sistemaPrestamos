@@ -9,7 +9,7 @@
                     <div class="col-md-12 col-lg-8 offset-lg-2">
                         <div class="widget">
                             <header class="widget-header">
-                                <h4 class="widget-title">Nueva venta</h4>
+                                <h4 class="widget-title">Nuevo Prestamo</h4>
                             </header><!-- .widget-header -->
                             <hr class="widget-separator">
                             <div class="widget-body">
@@ -17,7 +17,7 @@
                                       enctype="multipart/form-data">
                                     {{ csrf_field() }}
                                     <div class="form-group">
-                                        <label for="nit_number">Nº Identificacion:</label>
+                                        <label for="nit_number">Nº Carnet de Identidad:</label>
                                         <input type="text" name="nit_number" value="{{isset($user) ? $user->nit : ''}}"
                                                class="form-control" id="nit_number" required>
                                     </div>
@@ -40,7 +40,7 @@
                                     </div>
                                     <div class="form-group d-none over-change-display">
                                         <label for="address">Mapa:</label>
-                                        <div id="map" class="map-google"></div>
+                                        <div id="map"></div>
                                     </div>
                                     <input type="hidden" name="lat" value="{{isset($user) ? $user->lat : ''}}"
                                            class="form-control" id="lat">
@@ -58,12 +58,12 @@
                                                class="form-control" id="phone" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="amount">Monto:</label>
+                                        <label for="amount">Monto a Prestar:</label>
                                         <input type="number" step="any" min="1" name="amount"
                                                class="form-control amount-input" id="amount" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="utility">Utilidad:</label>
+                                        <label for="utility">Interés:</label>
                                         <select name="utility" class="form-control" id="utility">
                                             <option value="0.0">0%</option>
                                             <option value="0.05">5%</option>
@@ -83,7 +83,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group text-center total-box hidden">
-                                        <h4>Total + Utilidad</h4>
+                                        <h4>Total + Interés</h4>
                                         <h2 id="total_show"></h2>
                                     </div>
                                     <div class="form-group">

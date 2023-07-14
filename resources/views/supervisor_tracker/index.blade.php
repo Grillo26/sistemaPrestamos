@@ -10,14 +10,15 @@
                         <div class="widget p-lg">
                             <h4 class="m-b-lg">Agentes</h4>
                             <table class="table supervisor-tracker-table">
-                                <tbody>
+                                <thead>
                                 <tr class="visible-lg">
                                     <th>Nombre</th>
                                     <th>Cartera</th>
                                     <th>Pais</th>
                                     <th>Ciudad</th>
                                     <th>Accion</th>
-                                </tr>
+                                </tr></thead>
+                                <tbody>
                                 @foreach($clients as $client)
                                     <tr>
                                         <td><span class="value">{{$client->name}} {{$client->last_name}}</span></td>

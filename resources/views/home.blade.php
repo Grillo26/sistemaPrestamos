@@ -160,7 +160,7 @@
             <div class="widget stats-widget">
                 <div class="widget-body clearfix bg-warning">
                     <div class="pull-left">
-                        <h3 class="widget-title text-white">Asignar base</h3>
+                        <h3 class="widget-title text-white">Asignar Monto</h3>
                     </div>
                     <span class="pull-right big-icon watermark"><i class="fa fa-dollar"></i></span>
                 </div>
@@ -173,7 +173,7 @@
             <div class="widget stats-widget">
                 <div class="widget-body clearfix bg-primary">
                     <div class="pull-left">
-                        <h3 class="widget-title text-white">Cierre diario</h3>
+                        <h3 class="widget-title text-white">Cierre de Caja</h3>
                     </div>
                     <span class="pull-right big-icon watermark"><i class="fa fa-lock"></i></span>
                 </div>
@@ -181,7 +181,7 @@
         </a>
 
     </div>
-    <div class="col-md-3 col-sm-6">
+    <!--<div class="col-md-3 col-sm-6">
         <a href="{{url('supervisor/client')}}">
             <div class="widget stats-widget">
                 <div class="widget-body clearfix bg-purple">
@@ -190,10 +190,10 @@
                     </div>
                     <span class="pull-right big-icon watermark"><i class="fa fa-edit"></i></span>
                 </div>
-            </div><!-- .widget -->
+            </div><!-- .widget
         </a>
 
-    </div>
+    </div>-->
     <div class="col-md-3 col-sm-6">
         <a href="{{url('supervisor/tracker')}}">
             <div class="widget stats-widget">
@@ -294,59 +294,37 @@
                             <span class="text-success">Bs. {{($base_agent - $total_bill) + $total_summary}}</span>
                         </h2>
                     </div>
-                    <span class="pull-right big-icon text-danger watermark"><i class="fa fa-arrow-down"></i></span>
+                    <span class="pull-right big-icon text-success watermark"><i class="fa fa-arrow-right"></i></span>
                 </div>
             
             </div><!-- .widget -->
         </a>
     </div>
-    
 
-    <!--###################ESTIMADO A COBRAR############################-->
+     <!--#######################GASTOS##########################-->
+     <div class="col-6 col-sm-6">
+        <a href="{{url('bill')}}">
+            <div class="widget stats-widget widget-resume">
+                <div class="widget-body h-100 clearfix bg-white">
+                    <div class="pull-left">
+                        <h2 class="widget-title text-dark">GASTOS</h2>
+                        <h2 class="widget-title text-dark"><b>Bs. {{$total_bill}}</b></h2>
+                    </div>
+                    <span class="pull-right big-icon text-danger watermark"><i class="fa fa-arrow-down"></i></span>
+                </div>
+            </div><!-- .widget -->
+        </a>
+
+    </div>
+    
+    <!--###################TOTAL VENTAS############################-->
     <div class="col-6 col-sm-6">
         <a href="{{url('transaction')}}">
             <div class="widget stats-widget widget-resume">
                 <div class="widget-body h-100 clearfix bg-white">
                     <div class="pull-left">
-                        <h2 class="widget-title text-dark">Estimado a Cobrar</h2>
-                        <b>{{$base_agent - $total_bill}}</b>
-                            @if($total_summary>0)
-                                <span>+</span>
-                                <span class=""> {{$total_summary}}</span>
-                                <span class="text-success">= {{($base_agent - $total_bill) + $total_summary}}</span>
-                            @endif
-                        </h2>
-                    </div>
-                    <span class="pull-right big-icon text-success watermark"><i class="fa fa-arrow-up"></i></span>
-                </div>
-            </div><!-- .widget -->
-        </a>
-
-    </div>
-
-     <!--###################CANTIDAD DE CLIENTES CON PAGO############################-->
-     <div class="col-6 col-sm-6">
-        <a href="{{url('transaction')}}">
-            <div class="widget stats-widget widget-resume">
-                <div class="widget-body h-100 clearfix bg-white">
-                    <div class="pull-left">
-                        <h2 class="widget-title text-dark">Clientes con Pago</h2>
-                        <h2 class="widget-title text-dark"><b>{{$total_summary}}</b></h2>
-                    </div>
-                    <span class="pull-right big-icon text-success watermark"><i class="fa fa-arrow-up"></i></span>
-                </div>
-            </div><!-- .widget -->
-        </a>
-
-    </div>
-     <!--###################TOTAL COBRADO LIQUIDADA############################-->
-     <div class="col-6 col-sm-6">
-        <a href="{{url('transaction')}}">
-            <div class="widget stats-widget widget-resume">
-                <div class="widget-body h-100 clearfix bg-white">
-                    <div class="pull-left">
-                        <h2 class="widget-title text-dark">Total cobrada liquidad</h2>
-                        <h2 class="widget-title text-dark"><b>{{$total_summary}}</b></h2>
+                        <h2 class="widget-title text-dark">TOTAL VENTAS</h2>
+                        <h2 class="widget-title text-dark"><b>Bs. {{$today_sell}}</b></h2>
                     </div>
                     <span class="pull-right big-icon text-success watermark"><i class="fa fa-arrow-up"></i></span>
                 </div>
@@ -370,39 +348,7 @@
         </a>
 
     </div>
-
-    
-    
-    <!--###################TOTAL VENTAS############################-->
-    <div class="col-6 col-sm-6">
-        <a href="{{url('transaction')}}">
-            <div class="widget stats-widget widget-resume">
-                <div class="widget-body h-100 clearfix bg-white">
-                    <div class="pull-left">
-                        <h2 class="widget-title text-dark">TOTAL VENTAS</h2>
-                        <h2 class="widget-title text-dark"><b>Bs. {{$today_sell}}</b></h2>
-                    </div>
-                    <span class="pull-right big-icon text-success watermark"><i class="fa fa-arrow-up"></i></span>
-                </div>
-            </div><!-- .widget -->
-        </a>
-
-    </div>
-    <!--#######################GASTOS##########################-->
-    <div class="col-6 col-sm-6">
-        <a href="{{url('bill')}}">
-            <div class="widget stats-widget widget-resume">
-                <div class="widget-body h-100 clearfix bg-white">
-                    <div class="pull-left">
-                        <h2 class="widget-title text-dark">GASTOS</h2>
-                        <h2 class="widget-title text-dark"><b>Bs. {{$total_bill}}</b></h2>
-                    </div>
-                    <span class="pull-right big-icon text-warning watermark"><i class="fa fa-arrow-right"></i></span>
-                </div>
-            </div><!-- .widget -->
-        </a>
-
-    </div>
+   
     <!--#####################################################-->
     <div class="clearfix"></div>
     <div class="row m-0 d-block col-12 pb-4">
