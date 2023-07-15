@@ -8,6 +8,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="widget p-lg">
+                        <p><b>Falta cobrar </b> <span class="text-primary">{{$total_rest}}</span> de <span class="text-success">{{$total_credit}}</span></p>
                             <h4 class="m-b-lg">Detalles Clientes y Ventas</h4>
                             <table class="table supervisor-history-table">
 

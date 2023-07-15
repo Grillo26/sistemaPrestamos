@@ -289,7 +289,7 @@
             <div class="widget stats-widget widget-resume">
                 <div class="widget-body clearfix h-100 bg-white">
                     <div class="pull-left">
-                        <h2 class="widget-title text-dark">Total Caja Actual</h2>
+                        <h2 class="widget-title text-dark">TOTAL CAJA ACTUAL</h2>
                         <h2 class="widget-title text-dark">
                             <span class="text-success">Bs. {{($base_agent - $total_bill) + $total_summary}}</span>
                         </h2>
@@ -307,7 +307,7 @@
             <div class="widget stats-widget widget-resume">
                 <div class="widget-body h-100 clearfix bg-white">
                     <div class="pull-left">
-                        <h2 class="widget-title text-dark">GASTOS</h2>
+                        <h2 class="widget-title text-dark">TOTAL GASTOS</h2>
                         <h2 class="widget-title text-dark"><b>Bs. {{$total_bill}}</b></h2>
                     </div>
                     <span class="pull-right big-icon text-danger watermark"><i class="fa fa-arrow-down"></i></span>

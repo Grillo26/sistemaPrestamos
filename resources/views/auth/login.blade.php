@@ -91,9 +91,9 @@
         </form>
     </div><!-- #login-form -->
 
-    <div class="simple-page-footer">
+    <!--<div class="simple-page-footer">
         <p><a href="{{ route('password.request') }}">¿Olvidaste tu contraseña?</a></p>
-    </div><!-- .simple-page-footer -->
+    </div> .simple-page-footer -->
 
 
 </div><!-- .simple-page-wrap -->

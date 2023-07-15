@@ -28,12 +28,12 @@
                                     </select>
                                 </div>
                                  <button class="btn btn-info hidden" type="submit">Buscar</button>
-                                <a href="{{url('bill/create')}}" class="btn btn-success">Agregar</a>
+                                <a href="{{url('bill/create')}}" class="btn btn-success">Nuevo Gasto</a>
 
                             </form>
                             <br class="clearfix">
                             <table class="table agente-g-table">
-                                <tbody>
+                                <thead>
                                 <tr class="visible-lg">
                                     <th>Cartera</th>
                                     <th>Fecha</th>
@@ -43,6 +43,8 @@
                                     <th>Agente</th>
                                     <th></th>
                                 </tr>
+                            </thead>
+                                <tbody>
                                 @foreach($clients as $client)
                                     <tr>
                                         <td>{{$client->wallet_name}}</td>

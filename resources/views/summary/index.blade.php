@@ -38,7 +38,7 @@
                                 <li class="list-group-item">Fecha de venta: <span class="text-purple">{{$credit_data->created_at}}</span></li>
                                 <li class="list-group-item">Tasa de interés: <span class="text-purple">{{$credit_data->utility}}%</span></li>
                                 <li class="list-group-item">Cuotas pactadas: <span class="text-purple">{{$credit_data->payment_number}}</span></li>
-                                <li class="list-group-item">Valor cuota: <span class="text-purple">{{$credit_data->payment_amount}}</span></li>
+                                <li class="list-group-item">Monto por cuota: <span class="text-purple">{{$credit_data->payment_amount}}</span></li>
                                 <li class="list-group-item">Capital: <span class="text-purple">{{$credit_data->amount_neto}}</span></li>
                                 <li class="list-group-item">Intereses: <span class="text-purple">{{$credit_data->utility_amount}}</span></li>
                                 <li class="list-group-item">Total: <span class="text-purple">{{$credit_data->total}}</span></li>
@@ -54,14 +54,16 @@
                         <div class="widget p-lg">
                             <h4 class="m-b-lg">Historial</h4>
                             <table class="table agente-paymentsH-table">
-                                <tbody>
+                            <thead>
                                 <tr>
                                     <th>Fecha</th>
                                     <th>No</th>
-                                    <th>Valor</th>
+                                    <th>Monto Pgagado</th>
                                     <th>Saldo</th>
                                     <th></th>
                                 </tr>
+                            </thead>
+                                <tbody>
                                 @foreach($clients as $client)
                                     <tr>
                                         <td>{{$client->created_at}}</td>
@@ -79,7 +81,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="widget p-lg">
-                            <h4 class="m-b-lg">Ultimos creditos</h4>
+                            <h4 class="m-b-lg">Código Últimos Créditos</h4>
                             @foreach($other_credit as $c)
                                 @if((app('request')->input('id_credit'))!=$c->id)
                                     <a href="{{url('summary')}}/?id_credit={{$c->id}}" class="btn btn-info">{{$c->id}}</a>

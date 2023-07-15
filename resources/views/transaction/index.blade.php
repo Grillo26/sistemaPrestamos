@@ -10,16 +10,18 @@
                         <div class="widget p-lg">
                             <h4 class="m-b-lg">Ventas realizadas</h4>
                             <table class="table agente-transactionV-table">
-                                <tbody>
+                                <thead>
                                 <tr class="visible-lg">
                                     <th>Nombres</th>
-                                    <th>Credito</th>
+                                    <th>Codigo Credito</th>
                                     <th>Barrio</th>
                                     <th>Hora</th>
                                     <th>Tasa</th>
                                     <th>Cuotas</th>
                                     <th>Valor neto</th>
                                 </tr>
+                            </thead>
+                                <tbody>
                                 @foreach($credit as $cred)
                                     <tr>
                                         <td><span class="value">{{$cred->name}} {{$cred->last_name}}</span></td>
@@ -46,7 +48,7 @@
                         <div class="widget p-lg">
                             <h4 class="m-b-lg">Pagos Recibidos</h4>
                             <table class="table agente-transactionR-table">
-                                <tbody>
+                                <thead>
                                 <tr class="visible-lg">
                                     <th>Nombres</th>
                                     <th>Fecha</th>
@@ -55,6 +57,8 @@
                                     <th>Saldo</th>
                                     <th>Última cuota</th>
                                 </tr>
+                            </thead>
+                                <tbody>
                                 @foreach($summary as $sum)
                                     <tr>
                                         <td><span class="value">{{$sum->name}} {{$sum->last_name}}</span></td>
@@ -79,12 +83,14 @@
                         <div class="widget p-lg">
                             <h4 class="m-b-lg">Gastos</h4>
                             <table class="table agente-transactionG-table">
-                                <tbody>
+                                <thead>
                                 <tr class="visible-lg">
                                     <th>Gasto</th>
                                     <th>Detalle</th>
                                     <th>Valor neto</th>
                                 </tr>
+                            </thead>
+                                <tbody>
                                 @foreach($bills as $bill)
                                     <tr>
                                         <td><span class="value">{{$bill->type}}</span></td>

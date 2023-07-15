@@ -38,8 +38,8 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <button type="submit" class="hidden btn btn-success btn-block btn-md">Guardar</button>
-                                        <a id="link_client_audit" class="btn btn-success btn-block" disabled href="{{url('supervisor/review')}}">Auditar</a>
+                                        <!--<button type="submit" class="hidden btn btn-success btn-block btn-md">Guardar</button>-->
+                                        <a id="link_client_audit" class="btn btn-success btn-block" disabled href="{{url('supervisor/review')}}">Revisar</a>
                                     </div>
                                 </form>
 

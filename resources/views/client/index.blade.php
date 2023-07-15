@@ -10,12 +10,12 @@
                         <div class="widget p-lg">
                             <h4 class="m-b-lg">Detalles Clientes y Ventas</h4>
                             <table class="table client-table">
-                                <thead >
-                                <tr>
+                                <thead>
+                                <tr class="visible-lg">
                                     <th>Nombre</th>
                                     <th>Apellidos</th>
                                     <th>Barrio</th>
-                                    <th>Total</th>
+                                    <th>Total Prestamos</th>
                                     <th>Pagados</th>
                                     <th>Vigentes</th>
                                     <th>Monto Prestado</th>
@@ -25,17 +25,17 @@
                                 </tr>
                                 </thead>
                                 
-                                @foreach($clients as $client)
                                 <tbody>
+                                @foreach($clients as $client)
                                     <tr>
-                                        <td><span class="value">{{$client->name}}</span></td>
-                                        <td><span class="value">{{$client->last_name}}</span></td>
-                                        <td><span class="value">{{$client->province}}</span></td>
-                                        <td><span class="value">{{$client->credit_count}}</span></td>
-                                        <td><span class="value">{{$client->closed}}</span></td>
-                                        <td><span class="value">{{$client->inprogress}}</span></td>
-                                        <td><span class="value">{{isset($client->amount_net) ? $client->amount_net->amount_neto +$client->gap_credit : 0}}</span></td>
-                                        <td><span class="value">{{$client->summary_net + $client->gap_credit}}</span></td>
+                                        <td>{{$client->name}}</td>
+                                        <td>{{$client->last_name}}</td>
+                                        <td>{{$client->province}}</td>
+                                        <td>{{$client->credit_count}}</td>
+                                        <td>{{$client->closed}}</td>
+                                        <td>{{$client->inprogress}}</td>
+                                        <td>{{isset($client->amount_net) ? $client->amount_net->amount_neto +$client->gap_credit : 0}}</td>
+                                        <td>{{$client->summary_net + $client->gap_credit}}</td>
                                         <td>
                                             @if($client->status=='good')
                                                 <span class="badge-info badge">BUENO</span>
@@ -55,7 +55,8 @@
                                     </tr>
                                 @endforeach
 
-                                </tbody></table>
+                                </tbody>
+                            </table>
                         </div><!-- .widget -->
                     </div>
                 </div><!-- .row -->

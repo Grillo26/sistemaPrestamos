@@ -19,7 +19,7 @@
                                     <th>Dias sin pagar</th>
                                     <th>Valor</th>
                                     <th>Saldo</th>
-                                    <th>Barrio</th>
+                                    <th>Barrio</th>  
                                     <th>Status</th>
                                     <th></th>
                                 </tr>
