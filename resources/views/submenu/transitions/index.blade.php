@@ -10,7 +10,7 @@
                         <div class="widget p-lg">
                             <h4 class="m-b-lg">Creditos Otorgados</h4>
                             <table class="table supervisor-creditos-table">
-                                <tbody>
+                                <thead>
                                 <tr class="visible-lg">
                                     <th>Nombres</th>
                                     <th>Credito</th>
@@ -20,6 +20,8 @@
                                     <th>Cuotas</th>
                                     <th>Valor neto</th>
                                 </tr>
+                            </thead>
+                                <tbody>
                                 @foreach($credit as $cred)
                                     <tr>
                                         <td><span class="value">{{$cred->name}} {{$cred->last_name}}</span></td>
@@ -43,7 +45,7 @@
                         <div class="widget p-lg">
                             <h4 class="m-b-lg">Pagos Recibidos</h4>
                             <table class="table supervisor-payments-table">
-                                <tbody>
+                                <thead>
                                 <tr class="visible-lg">
                                     <th>Nombres</th>
                                     <th>Fecha</th>
@@ -52,6 +54,8 @@
                                     <th>Valor</th>
                                     <th>Saldo</th>
                                 </tr>
+                            </thead>
+                                <tbody>
                                 @foreach($summary as $sum)
                                     <tr>
                                         <td><span class="value">{{$sum->name}} {{$sum->last_name}}</span></td>
@@ -75,13 +79,15 @@
                         <div class="widget p-lg">
                             <h4 class="m-b-lg">Gastos del Agente</h4>
                             <table class="table supervisor-gas-table">
-                                <tbody>
+                                <thead>
                                 <tr class="visible-lg">
                                     <th>Gasto</th>
                                     <th>Detalle</th>
                                     <th>Valor</th>
                                     <th>Fecha</th>
                                 </tr>
+                            </thead>
+                                <tbody>
                                 @foreach($bills as $bill)
                                     <tr>
                                         <td><span class="value">{{$bill->type_bill}}</span></td>

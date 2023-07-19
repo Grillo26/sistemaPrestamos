@@ -23,16 +23,20 @@ class UserSeeder extends Seeder
                 'password' => bcrypt('12345678')
             ],
             [
-                'name' => 'Supervisor',
-                'email' => 'supervisor@supervisor.com',
+                'name' => 'Diego',
+                'email' => 'Diego',
                 'level' => 'supervisor',
-                'password' => bcrypt('12345678')
+                'password' => bcrypt('12345678'),
+                'address' => 'Yacuiba',
+                'country' => 'Bolivia'
             ],
             [
-                'name' => 'Agente',
-                'email' => 'agente@agente.com',
+                'name' => 'Joel',
+                'email' => 'Joel',
                 'level' => 'agent',
-                'password' => bcrypt('12345678')
+                'password' => bcrypt('12345678'),
+                'address' => 'Yacuiba',
+                'country' => 'Bolivia'
             ]
         );
 

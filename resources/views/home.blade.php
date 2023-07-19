@@ -270,12 +270,12 @@
     </div>
     <!--###################CAJA ULTIMA LIQUIDADA############################-->
     <div class="col-6 col-sm-6">
-        <a href="{{url('transaction')}}">
+        <a href="#">
             <div class="widget stats-widget widget-resume">
                 <div class="widget-body h-100 clearfix bg-white">
                     <div class="pull-left">
-                        <h2 class="widget-title text-dark">Caja ultima liquidad</h2>
-                        <h2 class="widget-title text-dark"><b>Bs. {{$total_summary}}</b></h2>
+                        <h2 class="widget-title text-dark">CAJA ULTIMA LIQUIDADA</h2>
+                        <h2 class="widget-title text-dark"><b>Bs. {{$valorIngresado}}</b></h2>
                     </div>
                     <span class="pull-right big-icon text-success watermark"><i class="fa fa-arrow-up"></i></span>
                 </div>
@@ -339,7 +339,7 @@
             <div class="widget stats-widget widget-resume">
                 <div class="widget-body h-100 clearfix bg-white">
                     <div class="pull-left">
-                        <h2 class="widget-title text-dark">Total Cobrado Día</h2>
+                        <h2 class="widget-title text-dark">Total Cobrado</h2>
                         <h2 class="widget-title text-dark"><b>Bs. {{$total_summary}}</b></h2>
                     </div>
                     <span class="pull-right big-icon text-success watermark"><i class="fa fa-arrow-up"></i></span>
@@ -404,7 +404,7 @@
             @else
                 <section class="app-content">
                     <div class="col-12 text-center p-4">
-                        <b>Cierre del día realizado. Vuelve mañana</b>
+                        <b>Cierre de Caja. Vuelve mañana</b>
                     </div>
                 </section>
             @endif

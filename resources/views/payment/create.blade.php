@@ -56,14 +56,14 @@
                                         <input type="text" readonly value="{{$credit_data['payment_done']}}" class="form-control" id="amount2">
                                     </div>
                                     <div class="form-group">
-                                        <label for="amount">Valor de abono:</label>
-                                        <input type="number" step="any" min="1" max="{{$credit_data['rest']}}" value="{{$credit_data['payment_quote']}}" name="amount" class="form-control" id="amount">
+                                        <label for="amount">Monto a Cancelar:</label>
+                                        <input type="tel" step="any" min="1" max="{{$credit_data['rest']}}" value="{{$credit_data['payment_quote']}}" name="amount" class="form-control" id="amount">
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group"> 
                                         <button type="submit" {{($credit_data['rest']<1) ? 'disabled': ''}} class="btn btn-success btn-block btn-md">Guardar pago</button>
                                     </div>
                                     
-                                </form>
+                                </form> 
                                
                             </div><!-- .widget-body -->
                         </div><!-- .widget -->

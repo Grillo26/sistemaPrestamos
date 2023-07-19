@@ -17,7 +17,7 @@
                                     {{ csrf_field() }}
                                     <div class="form-group">
                                         <label for="amount">Monto:</label>
-                                        <input type="number" step="any" min="1" name="amount" class="form-control amount-input" id="amount" required>
+                                        <input type="tel" step="any" min="1" name="amount" class="form-control amount-input" id="amount" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="utility">Utilidad:</label>

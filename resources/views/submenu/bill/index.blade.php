@@ -11,7 +11,7 @@
                             <h4 class="m-b-lg">Gastos</h4>
                             <form class="form-inline" action="{{url('supervisor/menu/bill')}}/{{$id}}" method="GET">
                                 <div class="form-group">
-                                    <label for="nit_number"> Fecha Inicial:</label>
+                                    <label for="nit_number">Fecha Inicial:</label>
                                     <input type="text" name="date_start"  class="form-control datepicker-trigger" id="date_start" required>
                                 </div>
                                 <div class="form-group">
@@ -24,7 +24,7 @@
                             </form>
                             <br class="clearfix">
                             <table class="table supervisor-gastos-table">
-                                <tbody>
+                                <thead>
                                 <tr class="visible-lg">
                                     <th>Cartera</th>
                                     <th>Fecha</th>
@@ -34,6 +34,8 @@
                                     <th>Detalle</th>
                                     <th></th>
                                 </tr>
+                            </thead>
+                                <tbody>
                                 @foreach($clients as $client)
                                     <tr>
                                         <td>{{$client->wallet_name}}</td>

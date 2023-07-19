@@ -10,7 +10,7 @@
                         <div class="widget p-lg">
                             <h4 class="m-b-lg">Ventas realizadas</h4>
                             <table class="table supervisor-ventas-table">
-                                <tbody>
+                                <thead>
                                 <tr>
                                     <th>Nombres</th>
                                     <th>Credito</th>
@@ -20,6 +20,8 @@
                                     <th>Cuotas</th>
                                     <th>Valor neto</th>
                                 </tr>
+                                </thead>
+                                <tbody>
                                 @foreach($credit as $cred)
                                     <tr>
                                         <td><span class="value">{{$cred->name}} {{$cred->last_name}}</span></td>
@@ -45,7 +47,7 @@
                         <div class="widget p-lg">
                             <h4 class="m-b-lg">Pagos Recibidos</h4>
                             <table class="table supervisor-pagos-table">
-                                <tbody>
+                                <thead>
                                 <tr>
                                     <th>Nombres</th>
                                     <th>Credito</th>
@@ -53,6 +55,8 @@
                                     <th>Valor</th>
                                     <th>Hora</th>
                                 </tr>
+                                </thead>
+                                <tbody>
                                 @foreach($summary as $sum)
                                     <tr>
                                         <td><span class="value">{{$sum->name}} {{$sum->last_name}}</span></td>

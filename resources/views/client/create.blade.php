@@ -59,7 +59,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="amount">Monto a Prestar:</label>
-                                        <input type="number" step="any" min="1" name="amount"
+                                        <input type="tel" step="any" min="1" name="amount"
                                                class="form-control amount-input" id="amount" required>
                                     </div>
                                     <div class="form-group">

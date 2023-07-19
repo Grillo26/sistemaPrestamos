@@ -39,12 +39,14 @@
                     <div class="col-md-12">
                         <div class="widget p-lg">
                             <h4 class="m-b-lg">Historial Caja</h4>
-                            <table class="table client-table">
-                                <tbody>
+                            <table class="table client-table-historial">
+                                <thead>
                                 <tr class="visible-lg">
                                     <th>Fecha</th>
                                     <th>Saldo Base</th>
                                 </tr>
+                                </thead>
+                                <tbody>
                                 @foreach($report as $r)
                                     <tr>
                                         <td>{{$r->created_at}}</td>

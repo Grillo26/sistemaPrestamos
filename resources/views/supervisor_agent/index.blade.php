@@ -16,7 +16,7 @@
                                     <th>Cartera</th>
                                     <th>Pais</th>
                                     <th>Ciudad</th>
-                                    <th>Base</th>
+                                    <th>Monto</th>
                                     <th>Accion</th>
                                 </tr>
                                 </thead>

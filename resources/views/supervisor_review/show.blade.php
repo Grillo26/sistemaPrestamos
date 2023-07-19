@@ -82,6 +82,7 @@
                                 </div><!-- .widget -->
                             </a>
                         </div>
+                        <!--
                         <div class="col-md-3 col-sm-6">
                             <a href="{{url('supervisor/menu/report')}}/{{$id}}">
                                 <div class="widget stats-widget">
@@ -91,10 +92,10 @@
                                         </div>
                                         <span class="pull-right big-icon watermark"><i class="fa fa-list-ol"></i></span>
                                     </div>
-                                </div><!-- .widget -->
+                                </div><!-- .widget
                             </a>
 
-                        </div>
+                        </div>-->
                         <div class="col-md-3 col-sm-6">
                             <a href="{{url('supervisor/menu/done')}}/{{$id}}">
                                 <div class="widget stats-widget">

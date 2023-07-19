@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
+    public $valorIngresado=0;
     /**
      * Create a new controller instance.
      *
@@ -31,6 +32,7 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
+         $valorIngresado= null;
         $data_summary = db_summary::whereDate('summary.created_at',
             Carbon::now()->toDateString())
             ->where('credit.id_agent', Auth::id())
@@ -48,7 +50,7 @@ class HomeController extends Controller
                 'summary.created_at'
             )
             ->groupBy('summary.id')
-            ->get();
+            ->get(); 
 
         $close_day = db_close_day::whereDate('created_at', Carbon::now()->toDateString())
             ->where('id_agent', Auth::id())
@@ -77,13 +79,25 @@ class HomeController extends Controller
             ->select('bills.*', 'wallet.name as wallet_name')
             ->get();
 
+        $dato = json_decode($data_summary, true);
+        if (!empty($dato)) 
+        {
+            $ultimaFila = end($dato);
+            if (is_array($ultimaFila)) {
+                $valorIngresado = $ultimaFila['amount'];
+            }
+        }
+
         $data = [
             'base_agent' => $base,
             'total_bill' => $bill->sum('amount'),
             'total_summary' => $total_summary,
             'close_day' => $close_day,
-            'today_sell'=> $today_sell
+            'today_sell'=> $today_sell,
+            'valorIngresado' => $valorIngresado
         ];
+
+        
 
         return view('home',$data);
     }

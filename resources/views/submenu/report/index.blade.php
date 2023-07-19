@@ -10,7 +10,7 @@
                         <div class="widget p-lg">
                             <h4 class="m-b-lg">Movimientos desde {{$date_start}} hasta {{$date_end}}</h4>
                             <table class="table supervisor-report-table">
-                                <tbody>
+                                <thead>
                                 <tr class="visible-lg">
                                     <th>Fecha cierre</th>
                                     <th>Base</th>
@@ -22,6 +22,8 @@
                                     <th>Valor Cartera</th>
 
                                 </tr>
+                            </head>
+                                <tbody>
                                 @foreach($credit as $cred)
                                     <tr>
                                         <td><span class="value">{{$cred->created_at}}</span></td>

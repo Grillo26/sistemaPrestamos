@@ -144,6 +144,7 @@ class closeController extends Controller
     public function update(Request $request, $id)
     {
         $total = $request->total_today;
+        $total_base =0; //Reiniciar la variable total cuando se cierra el sistema
         $base_total = $request->base_amount_total;
 
         if(!isset($total)){return 'Total vacio';};
@@ -151,7 +152,7 @@ class closeController extends Controller
 
         db_supervisor_has_agent::where('id_user_agent',$id)
             ->where('id_supervisor',Auth::id())
-            ->update(['base'=>$total]);
+            ->update(['base'=>$total_base]);
 
         $values = array(
             'id_agent' => $id,
@@ -159,7 +160,7 @@ class closeController extends Controller
             'created_at' => Carbon::now(),
             'total' => $total,
             'base_before' => $base_total,
-            //'from_number' =>
+            'from_number' => 0
         );
         db_close_day::insert($values);
 

@@ -12,8 +12,10 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class paymentController extends Controller
 {
+    public $ultimoMontoPagado;
     /**
      * Display a listing of the resource.
      *
@@ -139,6 +141,7 @@ class paymentController extends Controller
             'payment_done' => db_summary::where('id_credit', $id)->count(),
             'payment_quote' => ($tmp_rest > $tmp_quote) ? $tmp_rest : $tmp_quote
     );
+
 
 
 

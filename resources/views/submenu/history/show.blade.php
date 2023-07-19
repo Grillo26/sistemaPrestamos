@@ -31,7 +31,7 @@
                         <div class="widget p-lg">
                             <h4 class="m-b-lg">Historial</h4>
                             <table class="table supervisor-show-table">
-                                <tbody>
+                                <thead>
                                 <tr class="visible-lg">
                                     <th>Fecha</th>
                                     <th>No</th>
@@ -39,6 +39,8 @@
                                     <th>Resta</th>
                                     <th></th>
                                 </tr>
+                            </thead>
+                                <tbody>
                                 @foreach($clients as $client)
                                     <tr>
                                         <td>{{$client->created_at}}</td>
