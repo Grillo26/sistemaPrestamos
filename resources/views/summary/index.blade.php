@@ -24,6 +24,46 @@
                                     </div>
                                     <span class="pull-right big-icon watermark"><i class="fa fa-money"></i></span>
                                 </div>
+                                <!--###################### CAJA DE CHECKBOX ##############################-->
+                                <style>
+                                    .checkbox-grid {
+                                        display: grid;
+                                        grid-template-columns: repeat(5, 1fr);
+                                        grid-gap: 30px;
+                                    }
+
+                                    
+                                    .checkbox-grid input[type="checkbox"] {
+                                        transform: scale(2.5);
+                                     
+                                        
+                                    }
+                                </style>
+                                @foreach($clients as $client)
+
+                                @php
+                                $lastNumber = substr($client->number_index, -1);
+                                @endphp
+                                @endforeach
+                                <div class="widget-body clearfix">
+                                    <div class="checkbox-grid">
+                                        @for ($i = 1; $i <= 24; $i++)
+                                                @if ($i <= $lastNumber)
+                                            
+                                                    <input type="checkbox" checked disabled>
+                                            
+                                                @else
+                                                
+                                                    <input type="checkbox" disabled>
+                                                
+                                                @endif
+                                        @endfor
+                              
+                                    </div>
+                                </div>
+
+                                <!--#########################################################################-->
+                                
                             </div>
                         </div>
                     @endif
@@ -47,8 +87,59 @@
                         </div>
                     </div>
 
+                    
+
+                    
+
                 </div>
-        
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="widget p-lg">
+                            <!--###################### CAJA DE CHECKBOX ##############################-->
+                            <style>
+                                    .checkbox-grid {
+                                        display: grid;
+                                        grid-template-columns: repeat(5, 1fr);
+                                        grid-gap: 30px;
+                                    }
+
+                                    
+                                    .checkbox-grid input[type="checkbox"] {
+                                        transform: scale(2.5);
+                                     
+                                        
+                                    }
+                                </style>
+                                @foreach($clients as $client)
+
+                                @php
+                                $lastNumber = substr($client->number_index, -1);
+                                @endphp
+                                @endforeach
+                                <div class="widget-body clearfix">
+                                    <div class="checkbox-grid">
+                                        @for ($i = 1; $i <= 24; $i++)
+                                                @if ($i <= $lastNumber)
+                                            
+                                                    <input type="checkbox" checked disabled>
+                                            
+                                                @else
+                                                
+                                                    <input type="checkbox" disabled>
+                                                
+                                                @endif
+                                        @endfor
+                              
+                                    </div>
+                                </div>
+
+                                <!--#########################################################################-->
+                        </div>
+                    </div>  
+                </div>
+
+
                 <div class="row">
                     <div class="col-md-12">
                         <div class="widget p-lg">
@@ -70,7 +161,7 @@
                                         <td>{{$client->number_index}}</td>
                                         <td>{{$client->amount}}</td>
                                         <td>{{$client->rest}}</td>
-                                        <td></td>
+                                        
                                     </tr>
                                 @endforeach
 
