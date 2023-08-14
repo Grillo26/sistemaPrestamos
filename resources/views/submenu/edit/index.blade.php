@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="widget p-lg">
-                            <h4 class="m-b-lg">Creditos Otorgados</h4>
+                            <h4 class="m-b-lg">Creditos Otorgados kkk</h4>
                             <table class="table supervisor-editC-table">
                                 <thead>
                                 <tr class="visible-lg">

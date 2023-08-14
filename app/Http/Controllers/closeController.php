@@ -152,7 +152,7 @@ class closeController extends Controller
 
         db_supervisor_has_agent::where('id_user_agent',$id)
             ->where('id_supervisor',Auth::id())
-            ->update(['base'=>$total_base]);
+            ->update(['base'=>$total]);
 
         $values = array(
             'id_agent' => $id,
