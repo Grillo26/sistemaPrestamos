@@ -36,7 +36,7 @@
                                     </tr>
                                 @endforeach
 
-                                </tbody></table>
+                                </tbody></table> 
                                 <footer class="widget-footer">
                                     <p><b>Falta cobrar </b> <span class="text-primary">{{$total_rest}}</span> de <span class="text-success">{{$total_credit}}</span></p>
                                 </footer>
