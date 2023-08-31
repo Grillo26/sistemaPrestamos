@@ -14,7 +14,7 @@
                                 <tr class="visible-lg">
                                     <th>Nombre</th>
                                     <th>Apellidos</th>
-                                    <th>Barrio</th>
+                                    <th>Fecha</th>
                                     <th>Total Prestamos</th>
                                     <th>Pagados</th>
                                     <th>Vigentes</th>

@@ -87,6 +87,7 @@ class HomeController extends Controller
                 $valorIngresado = $ultimaFila['amount'];
             }
         }
+        $total = 
 
         $data = [
             'base_agent' => $base,

@@ -90,7 +90,7 @@
                                     <th>Valor</th>
                                     <th>Saldo</th>
                                     <th>Ultimo pago</th>
-                                    <th>Barrio</th>
+                                    <th>Barrioddd</th>
                                     <th>Status</th>
                                     <th></th>
                                 </tr>

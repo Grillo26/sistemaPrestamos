@@ -151,6 +151,7 @@ class userController extends Controller
             ->sum('amount_neto');
         $base -= $base_credit;
 
+        
         if ($amount > $base) {
             $mensaje = '<div style="font-size: 60px; display: flex; align-items: center; justify-content: center; height: 100vh;">No tienes dinero suficiente</div>';
             return $mensaje;

@@ -4866,9 +4866,8 @@ td.mail-right {
     .client-table td:nth-of-type(2):before {
         content: "Apellidos";
     }
-
     .client-table td:nth-of-type(3):before {
-        content: "Barrio";
+        content: "Fecha sdfsd";
     }
 
     .client-table td:nth-of-type(4):before {
@@ -4971,7 +4970,7 @@ td.mail-right {
     }
 
     .agente-route-table td:nth-of-type(9):before {
-        content: "Barrio";
+        content: "fecha final"; /*##############Aqui cambiar*/
     }
 
     .agente-route-table td:nth-of-type(10):before {

@@ -47,10 +47,11 @@
                                     <input type="hidden" name="lng" value="{{isset($user) ? $user->lng : ''}}"
                                            class="form-control" id="lng">
                                     <div class="form-group">
+
+                                    <!--code cambiar-->
                                         <label for="province">Barrio:</label>
-                                        <input type="text" name="province"
-                                               value="{{isset($user) ? $user->province : ''}}" class="form-control"
-                                               id="province" required>
+                                        <input type="text" value="{{isset($user) ? $user->province : ''}}" name="province"  class="form-control datepicker-trigger" id="province" required>
+
                                     </div>
                                     <div class="form-group">
                                         <label for="phone">Teléfono:</label>

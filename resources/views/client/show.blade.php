@@ -32,7 +32,7 @@
                                         <input type="text" name="address"  readonly value="{{isset($user) ? $user->address : ''}}"  class="form-control" id="address" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="province">Barrio:</label>
+                                        <label for="province">Fecha Final:</label>
                                         <input type="text" name="province"  readonly value="{{isset($user) ? $user->province : ''}}"  class="form-control" id="province" required>
                                     </div>
                                     <div class="form-group">

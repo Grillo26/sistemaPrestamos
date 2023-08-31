@@ -154,7 +154,7 @@ class closeController extends Controller
             ->where('id_supervisor',Auth::id())
             ->update(['base'=>$total]);
 
-        $values = array(
+        $values = array( 
             'id_agent' => $id,
             'id_supervisor' => Auth::id(),
             'created_at' => Carbon::now(),
@@ -181,7 +181,7 @@ class closeController extends Controller
     public function close_automatic(){
         $data_agents = db_supervisor_has_agent::all();
 
-        foreach ($data_agents as $d){
+        foreach ($data_agents as $d){ 
 
             $base_amount = db_supervisor_has_agent::where('id_user_agent',$d->id_user_agent)->first()->base;
             $today_amount = db_summary::whereDate('created_at', '=', Carbon::now()->toDateString())
