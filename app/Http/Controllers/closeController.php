@@ -197,14 +197,14 @@ class closeController extends Controller
 
             db_supervisor_has_agent::where('id_user_agent',$d->id_user_agent)
                 ->where('id_supervisor',Auth::id())
-                ->update(['base'=>$total]);
+                ->update(['base'=>3000]);
 
             $values = array(
                 'id_agent' => $d->id_user_agent,
                 'id_supervisor' => Auth::id(),
                 'created_at' => Carbon::now(),
-                'total' => $total,
-                'base_before' => $base_amount,
+                'total' => 2550,
+                'base_before' => 1333,
 
             );
 
